@@ -1,10 +1,13 @@
 import Image from 'next/image'
-import Homepage from './homepage';
+import Navbar from './components/Navbar';
 
 export default function Home() {
   return (
     <>
-      <Homepage />
+      <div>
+        Homepage
+      </div>
+      <Navbar />
     </>
   )
 }
