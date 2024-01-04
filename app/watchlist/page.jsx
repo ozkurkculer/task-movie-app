@@ -5,7 +5,6 @@ function WatchList() {
   return (
     <>
     <div>WatchList</div>
-    <Navbar />
     </>
   )
 }
