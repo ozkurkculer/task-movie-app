@@ -19,7 +19,7 @@
     <a href="https://github.com/ozkurkculer/task-movie-app"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="#">View Demo</a>
+    <a href="https://task-movie-app.vercel.app">View Demo</a>
     ·
     <a href="https://github.com/ozkurkculer/task-movie-app/issues">Report Bug</a>
     ·
