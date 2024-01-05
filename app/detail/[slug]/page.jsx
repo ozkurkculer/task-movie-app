@@ -88,7 +88,7 @@ function Detail({ params }) {
             </p>
           </div>
         </div>
-        <div className={`relative left-[10%] bottom-[50%] xl:bottom-[58%] 2xl:bottom-[49%] h-auto w-[100px]`}>
+        <div className={`relative left-[10%] bottom-[60%] xl:bottom-[58%] 2xl:bottom-[49%] h-auto w-[100px]`}>
         <img src={'https://image.tmdb.org/t/p/w500' + movieDetail.poster_path} alt={`Movie Poster`} className="rounded-2xl" />
       </div>
       </section>
