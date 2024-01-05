@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<a name="readme-top"></a>
 
-## Getting Started
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<br />
+<div align="center">
+  <a href="https://github.com/ozkurkculer/task-movie-app">
+    <img src="public/popcorn.png" alt="Logo" width="125">
+  </a>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+  <p align="center">
+    Movie App Clone
+    <br />
+    <a href="https://github.com/ozkurkculer/task-movie-app"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="#">View Demo</a>
+    ·
+    <a href="https://github.com/ozkurkculer/task-movie-app/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/ozkurkculer/task-movie-app/issues">Request Feature</a>
+  </p>
+</div>
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+<!-- ABOUT THE PROJECT -->
+## Proje Detayları
 
-## Learn More
+`[TR]` 
+Proje The Movie Database sitesinin API'larını kullanarak ve açık kaynak [Figma tasarımı](https://www.figma.com/file/crigUib6LIYnTmfGJLgdqZ/Movies-app-(Community)) ile hazırlanmıştır. 
 
-To learn more about Next.js, take a look at the following resources:
+- Proje [Next.js](https://nextjs.org) React ile birlikte Tailwind kullanılarak hazırlanmıştır.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `app/` directory içerisinde api, components ve sayfalar mevcuttur.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- `/api` içerisinde film detaylarının ve film bilgilerinin çekildiği iki ayrı film dosyası bulunmaktadır.
 
-## Deploy on Vercel
+- `/components` içerisinde sayfalar için kullanılan componentlar eklenmiştir. 
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Film detayı, ana sayfa, izleme listesi, arama sayfası, loading görseli bulunmaktadır.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Arama sayfası ve izleme listesi verilen task doğrultusunda hazırlanmamıştır statik hata kodları verilmektedir.
+
+- Sayfalar responsive olarak hazırlanmıştır. Hem masaüstü hem mobil uyumludur.Testleri yapılmıştır.
+
+## Contact
+
+Mehmet Emin Özkürkçüler | [LinkedIn](https://linkedin.com/in/mehmeteminozkurkculer/)
+
+Project Link |  [Click](https://github.com/ozkurkculer/task-movie-app)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- MARKDOWN LINKS & IMAGES -->
+[contributors-shield]: https://img.shields.io/github/contributors/ozkurkculer/task-movie-app.svg?style=for-the-badge
+[contributors-url]: https://github.com/ozkurkculer/task-movie-app/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/ozkurkculer/task-movie-app.svg?style=for-the-badge
+[forks-url]: https://github.com/ozkurkculer/task-movie-app/network/members
+[stars-shield]: https://img.shields.io/github/stars/ozkurkculer/task-movie-app.svg?style=for-the-badge
+[stars-url]: https://github.com/ozkurkculer/task-movie-app/stargazers
+[license-shield]: https://img.shields.io/github/license/ozkurkculer/task-movie-app.svg?style=for-the-badge
+[license-url]: https://github.com/ozkurkculer/task-movie-app/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/mehmeteminozkurkculer/
+[product-screenshot]: images/screenshot.png
+[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
