@@ -230,7 +230,7 @@ const icons = {
   ),
   error: (
     <svg
-      enable-background="new 0 0 139 139"
+      enableBackground="new 0 0 139 139"
       height="139px"
       id="Warning"
       version="1.1"

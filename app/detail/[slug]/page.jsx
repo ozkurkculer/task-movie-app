@@ -73,17 +73,17 @@ function Detail({ params }) {
   return Object.keys(movieDetail).length !== 0 ? (
     <div className="w-screen h-screen flex flex-col pb-10" >
       <section className='h-1/3'>
-        <img src={'https://image.tmdb.org/t/p/original' + movieDetail.backdrop_path} alt="Movie Cover" className='w-full h-full object-cover' />
-        <div className="px-[36%] md:px-[25%] lg:px-[20%] xl:px-[18%]">
-          <h1 className='text-white font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl'>{movieDetail ? movieDetail.original_title : 'TITLE'}</h1>
-          <div className="flex flex-row text-xs text-nowrap">
-            <p className='flex flex-row gap-2 items-center text-grey border-r-2 border-grey pr-4'>
+        <img src={'https://image.tmdb.org/t/p/original' + movieDetail.backdrop_path} alt="Movie Cover" className='w-screen h-full object-cover' />
+        <div className="px-[38%] md:px-[25%] lg:px-[20%] xl:px-[18%] pt-2">
+          <h1 className='text-white font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl '>{movieDetail.original_title}</h1>
+          <div className="flex flex-row text-xs text-nowrap pt-1">
+            <p className='flex flex-row gap-1 md:gap-2 items-center text-grey border-r-2 border-grey pr-1 md:pr-4 '>
               {icons.calendar} {movieDetail.release_date.slice(0,4)}
             </p>
-            <p className='flex flex-row gap-2 items-center text-grey border-r-2 border-grey px-4'>
+            <p className='flex flex-row gap-1 md:gap-2 items-center text-grey border-r-2 border-grey px-1 md:px-4 '>
               {icons.clock} {movieDetail.runtime} Dakika
             </p>
-            <p className='flex flex-row gap-2 items-center text-grey pl-4'>
+            <p className='flex flex-row gap-1 md:gap-2 items-center text-grey pl-1 md:pl-4 '>
               {icons.ticket} {movieDetail.genres[0].name}
             </p>
           </div>
@@ -92,7 +92,7 @@ function Detail({ params }) {
         <img src={'https://image.tmdb.org/t/p/w500' + movieDetail.poster_path} alt={`Movie Poster`} className="rounded-2xl" />
       </div>
       </section>
-      <section className='w-full h-2/3 flex-grow px-6 md:px-32 xl:px-32  mt-16'>
+      <section className='w-screen h-2/3 flex-grow px-6 md:px-32 xl:px-32 mt-32 sm:mt-16 md:mt-20'>
         <Tabs tabs={tabs} />
       </section>
     </div>) : <Loading />
