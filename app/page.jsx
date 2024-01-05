@@ -39,7 +39,7 @@ export default function Home() {
   };
 
   const topRatedSlider = topRatedMoviePosterPaths.map((path, index) => (
-    <ImagePoster path={path} key={index} num={index + 1} classes="h-auto w-[145px] sm:w-[145px] md:w-[170px] lg:w-[200px] xl:w-[225px] rounded-2xl" />
+    <ImagePoster path={path} key={index} num={index + 1} mainClasses="h-auto w-[200px]" classes="rounded-2xl" />
   ));
 
   const topRatedPosters = topRatedMoviePosterPaths.map((path, index) => (
@@ -80,8 +80,10 @@ export default function Home() {
           </g>
         </svg>
       </div>
-      <div className="flex flex-row gap-3 flex-nowrap overflow-x-auto no-scrollbar my-5">
-        {topRatedSlider}
+      <div className="flex overflow-x-auto scrollbar-hide">
+        <div className="flex flex-row gap-3 my-5">
+          {topRatedSlider}
+        </div>
       </div>
       <section>
         <Tabs tabs={tabs} />
