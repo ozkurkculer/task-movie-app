@@ -7,7 +7,7 @@ function Comment({ data }) {
     <div className="container">
       <div className='grid text-white py-4 grid-cols-6'>
         <div className="col-span-1 flex flex-col items-center justify-start gap-3">
-          <Image src="/user.png" width={75} height={75} alt="User image"></Image>
+          <Image src="/user.png" width={50} height={50} alt="User image"></Image>
           <p className="text-primary font-light text-sm">{data.author_details.rating}</p>
         </div>
         <div className="col-span-5">
