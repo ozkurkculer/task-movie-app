@@ -16,7 +16,7 @@ const getPopularMovies = async () => {
     const res = await fetch(url, options).then(res => res.json()).then(
         (res) => {
             const imagePaths = res.results.reduce((acc, cur) => {
-                acc.push(cur.poster_path);
+                acc.push({poster_path: cur.poster_path, movieID: cur.id});
                 return acc;
             }, []);
 
@@ -35,7 +35,7 @@ const getTopRatedMovies = async () => {
         (res) => {
             res = res.results.slice(0, 10)
             const imagePaths = res.reduce((acc, cur) => {
-                acc.push(cur.poster_path);
+                acc.push({poster_path: cur.poster_path, movieID: cur.id});
                 return acc;
             }, []);
 
@@ -53,7 +53,7 @@ const getNowPlayingMovies = async () => {
     const res = await fetch(url, options).then(res => res.json()).then(
         (res) => {
             const imagePaths = res.results.reduce((acc, cur) => {
-                acc.push(cur.poster_path);
+                acc.push({poster_path: cur.poster_path, movieID: cur.id});
                 return acc;
             }, []);
 
@@ -72,7 +72,7 @@ const getUpcomingMovies = async () => {
     const res = await fetch(url, options).then(res => res.json()).then(
         (res) => {
             const imagePaths = res.results.reduce((acc, cur) => {
-                acc.push(cur.poster_path);
+                acc.push({poster_path: cur.poster_path, movieID: cur.id});
                 return acc;
             }, []);
 
