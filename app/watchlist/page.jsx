@@ -1,6 +1,11 @@
 import React from 'react'
 import icons from '../lib/icons'
 
+export const metadata = {
+  title: 'Watchlist',
+  description: 'Watchlist page',
+}
+
 function WatchList() {
   return (
     <div className='w-screen h-screen flex flex-col items-center justify-center gap-4 px-4 text-center'> 
