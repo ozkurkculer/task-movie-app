@@ -74,7 +74,7 @@ function Detail({ params }) {
     <div className="w-screen h-screen flex flex-col pb-10" >
       <section className='h-1/3'>
         <img src={'https://image.tmdb.org/t/p/original' + movieDetail.backdrop_path} alt="Movie Cover" className='w-screen h-full object-cover' />
-        <div className="px-[32%] md:px-[25%] lg:px-[20%] xl:px-[18%] pt-2">
+        <div className="pl-[38%] pr-[30%] md:px-[25%] lg:px-[20%] xl:px-[18%] pt-2">
           <h1 className='text-white font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-nowrap'>{movieDetail.original_title}</h1>
           <div className="flex flex-row text-xs text-nowrap pt-1">
             <p className='flex flex-row gap-1 md:gap-2 items-center text-grey border-r-2 border-grey pr-1 md:pr-4 '>
