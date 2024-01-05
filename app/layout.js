@@ -16,7 +16,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className + " w-screen h-screen bg-background"} >
         <Suspense fallback={<Loading />}>
-          {children}
+          <div className="pb-28">
+            {children}
+          </div>
           <Navbar />
         </Suspense>
       </body>
