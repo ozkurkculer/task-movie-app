@@ -55,7 +55,7 @@ function Detail({ params }) {
   const cast = () => {
     if (movieCast.length != 0) {
       return (movieCast.map((data, index) => {
-        <ActorCard data={data} key={index} />
+        return <ActorCard data={data} key={index} />
       }));
     }
     else {
@@ -67,7 +67,7 @@ function Detail({ params }) {
   const tabs = [
     { id: 'about', label: 'About Movie', content: <p className='text-white'>{aboutMovie}</p> },
     { id: 'reviews', label: 'Reviews', content: <div className='pb-20'>{reviews()}</div> },
-    { id: 'cast', label: 'Cast', content: <div>{cast()}</div> },
+    { id: 'cast', label: 'Cast', content: <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-7 2xl:grid-cols-10 gap-3'>{cast()}</div> },
   ];
 
   return Object.keys(movieDetail).length !== 0 ? (
