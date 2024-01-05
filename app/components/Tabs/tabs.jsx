@@ -20,7 +20,7 @@ const Tabs = ({ tabs }) => {
 
       <div>
         {tabs.map(tab => (
-          <div key={tab.id} className={ "flex flex-row flex-wrap gap-3 items-center " +(activeTab === tab.id ? 'block' : 'hidden')}>
+          <div key={tab.id} className={ "flex flex-row justify-center flex-wrap gap-3 items-center " +(activeTab === tab.id ? 'block' : 'hidden')}>
             {tab.content}
           </div>
         ))}
