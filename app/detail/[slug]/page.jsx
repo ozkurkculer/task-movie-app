@@ -2,7 +2,6 @@
 
 import DetailService from '@/app/api/detail.service';
 import { useEffect, useState } from 'react'
-import ImagePoster from '@/app/components/ImagePoster';
 import Tabs from '@/app/components/Tabs';
 
 import icons from '@/app/lib/icons';
