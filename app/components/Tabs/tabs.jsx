@@ -10,7 +10,7 @@ const Tabs = ({ tabs }) => {
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
-            className={`px-4 py-2 ${activeTab === tab.id ? 'text-white' : 'text-secondary'
+            className={` px-4 py-2 ${activeTab === tab.id ? 'text-white border-b-4 border-third' : 'text-secondary'
               }`}
           >
             {tab.label}

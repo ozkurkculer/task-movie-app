@@ -77,10 +77,37 @@ const getNowPlayingMovies = async () => {
 
 }
 
+const getUpcomingMovies = async () => {
+    const url = URL + '3/movie/upcoming?language=en-US&page=1';
+    const options = {
+        method: 'GET',
+        headers: {
+            accept: 'application/json',
+            Authorization: API_KEY,
+        }
+    };
+
+    const res = await fetch(url, options).then(res => res.json()).then(
+        (res) => {
+            const imagePaths = res.results.reduce((acc, cur) => {
+                acc.push(cur.poster_path);
+                return acc;
+            }, []);
+
+            return imagePaths;
+        }
+    )
+        .catch(err => console.error('error:' + err));
+
+    return res;
+
+}
+
 const MovieService = {
     getPopularMovies,
     getTopRatedMovies,
     getNowPlayingMovies,
+    getUpcomingMovies,
 }
 
 export default MovieService;
