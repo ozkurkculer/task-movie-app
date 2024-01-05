@@ -74,19 +74,19 @@ function Detail({ params }) {
 
   const tabs = [
     { id: 'about', label: 'About Movie', content: <p className='text-white'>{aboutMovie}</p> },
-    { id: 'reviews', label: 'Reviews', content: <div>{reviews()}</div> },
+    { id: 'reviews', label: 'Reviews', content: <div className='pb-20'>{reviews()}</div> },
     { id: 'cast', label: 'Cast', content: <div>{castValues}</div> },
   ];
 
-  return Object.keys(movieDetail).length === 0 ? (
-    <div className="w-screen h-screen flex flex-col" >
+  return Object.keys(movieDetail).length !== 0 ? (
+    <div className="w-screen h-screen flex flex-col pb-10" >
       <section className='h-1/3'>
         <img src={'https://image.tmdb.org/t/p/original' + movieDetail.backdrop_path} alt="Movie Cover" className='w-full h-full object-cover' />
         <div className="px-[36%] md:px-[25%] lg:px-[20%] xl:px-[18%]">
           <h1 className='text-white font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl'>{movieDetail ? movieDetail.original_title : 'TITLE'}</h1>
           <div className="flex flex-row text-xs text-nowrap">
             <p className='flex flex-row gap-2 items-center text-grey border-r-2 border-grey pr-4'>
-              {icons.calendar} {movieDetail.release_date.slice}
+              {icons.calendar} {movieDetail.release_date.slice(0,4)}
             </p>
             <p className='flex flex-row gap-2 items-center text-grey border-r-2 border-grey px-4'>
               {icons.clock} {movieDetail.runtime} Dakika
@@ -96,7 +96,9 @@ function Detail({ params }) {
             </p>
           </div>
         </div>
-        <ImagePoster path={movieDetail.poster_path} mainClasses="absolute left-[10%] bottom-[50%] xl:bottom-[58%] 2xl:bottom-[49%] h-auto w-[100px]" classes="rounded-2xl" />
+        <div className={`relative left-[10%] bottom-[50%] xl:bottom-[58%] 2xl:bottom-[49%] h-auto w-[100px]`}>
+        <img src={'https://image.tmdb.org/t/p/w500' + movieDetail.poster_path} alt={`Movie Poster`} className="rounded-2xl" />
+      </div>
       </section>
       <section className='w-full h-2/3 flex-grow px-6 md:px-32 xl:px-32  mt-16'>
         <Tabs tabs={tabs} />
