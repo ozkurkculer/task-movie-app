@@ -32,7 +32,6 @@ function Detail({ params }) {
     }
   };
 
-  // Use useEffect to log the state after it's updated
   useEffect(() => {
     setCastValues(cast())
   }, [movieCast]);
