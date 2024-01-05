@@ -92,7 +92,7 @@ function Detail({ params }) {
         <img src={'https://image.tmdb.org/t/p/w500' + movieDetail.poster_path} alt={`Movie Poster`} className="rounded-2xl" />
       </div>
       </section>
-      <section className='w-screen h-2/3 flex-grow px-6 md:px-32 xl:px-32 mt-40 sm:mt-16 md:mt-20'>
+      <section className='w-screen h-2/3 flex-grow px-6 md:px-32 xl:px-32 mt-48 sm:mt-16 md:mt-20'>
         <Tabs tabs={tabs} />
       </section>
     </div>) : <Loading />
