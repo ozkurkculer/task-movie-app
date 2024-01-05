@@ -15,7 +15,6 @@ function Detail({ params }) {
   const [movieDetail, setMovieDetail] = useState({});
   const [movieReviews, setMovieReviews] = useState([]);
   const [aboutMovie, setAboutMovie] = useState();
-  const [castValues, setCastValues] = useState();
 
   useEffect(() => {
     fetchMovieDetail();
@@ -31,11 +30,6 @@ function Detail({ params }) {
       console.error('Error fetching movie cast:', error);
     }
   };
-
-  useEffect(() => {
-    setCastValues(cast())
-  }, [movieCast]);
-
   const fetchMovieDetail = async () => {
     const detail = await DetailService.getMovieDetail(params.slug);
     setMovieDetail(detail);
@@ -73,7 +67,7 @@ function Detail({ params }) {
   const tabs = [
     { id: 'about', label: 'About Movie', content: <p className='text-white'>{aboutMovie}</p> },
     { id: 'reviews', label: 'Reviews', content: <div className='pb-20'>{reviews()}</div> },
-    { id: 'cast', label: 'Cast', content: <div>{castValues}</div> },
+    { id: 'cast', label: 'Cast', content: <div>{cast()}</div> },
   ];
 
   return Object.keys(movieDetail).length !== 0 ? (

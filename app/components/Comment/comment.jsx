@@ -2,9 +2,6 @@ import Image from "next/image"
 import { useEffect } from 'react'
 
 function Comment({ data }) {
-  useEffect(() => {
-    console.log(data);
-  }, []);
 
   return (
     <div className="container">
