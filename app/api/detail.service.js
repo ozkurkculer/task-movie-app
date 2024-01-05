@@ -10,7 +10,7 @@ const options = {
 };
 
 const getMovieDetail = async (movieID) => {
-  const url = URL + `3/movie/${movieID}?language=tr-TR`;
+  const url = URL + `3/movie/${movieID}?language=en-US`;
   const res = await fetch(url, options)
     .then((res) => {
       return res.json();
@@ -21,11 +21,12 @@ const getMovieDetail = async (movieID) => {
 };
 
 const getMovieReviews = async (movieID) => {
-  const url = URL + `3/movie/${movieID}/reviews?language=tr-TR&page=1`;
+  const url = URL + `3/movie/${movieID}/reviews?language=en-US&page=1`;
 
   const res = await fetch(url, options)
+    .then((res) => res.json())
     .then((res) => {
-      return res.json();
+      return res.results;
     })
     .catch((err) => console.error("error:" + err));
 
@@ -33,18 +34,17 @@ const getMovieReviews = async (movieID) => {
 };
 
 const getMovieCredits = async (movieID) => {
-    const url = URL + `3/movie/${movieID}/credits?language=tr-TR`;
-  
-    const res = await fetch(url, options)
-      .then((res) => {
-        return res.json();
-      })
-      .catch((err) => console.error("error:" + err));
-  
-    return res;
-  };
-  
+  const url = URL + `3/movie/${movieID}/credits?language=en-US`;
 
+  const res = await fetch(url, options)
+    .then((res) => res.json())
+    .then((res) => {
+      return res;
+    })
+    .catch((err) => console.error("error:" + err));
+
+  return res;
+};
 
 const DetailService = {
   getMovieDetail,
