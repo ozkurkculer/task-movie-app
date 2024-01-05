@@ -75,12 +75,12 @@ function Detail({ params }) {
       <section className='h-1/3'>
         <img src={'https://image.tmdb.org/t/p/original' + movieDetail.backdrop_path} alt="Movie Cover" className='w-screen h-full object-cover' />
         <div className="px-[38%] md:px-[25%] lg:px-[20%] xl:px-[18%] pt-2">
-          <h1 className='text-white font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl '>{movieDetail.original_title}</h1>
+          <h1 className='text-white font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-nowrap'>{movieDetail.original_title}</h1>
           <div className="flex flex-row text-xs text-nowrap pt-1">
             <p className='flex flex-row gap-1 md:gap-2 items-center text-grey border-r-2 border-grey pr-1 md:pr-4 '>
               {icons.calendar} {movieDetail.release_date.slice(0,4)}
             </p>
-            <p className='flex flex-row gap-1 md:gap-2 items-center text-grey border-r-2 border-grey px-1 md:px-4 '>
+            <p className='flex flex-row gap-1 md:gap-2 items-center text-grey border-r-2 border-grey px-1 md:px-4 text-nowrap'>
               {icons.clock} {movieDetail.runtime} Dakika
             </p>
             <p className='flex flex-row gap-1 md:gap-2 items-center text-grey pl-1 md:pl-4 '>
