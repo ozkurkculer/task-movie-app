@@ -2,7 +2,7 @@ import React from 'react'
 import icons from '../lib/icons'
 
 export const metadata = {
-  title: 'Search',
+  title: 'Search | Movie App',
   description: 'Serach page',
 }
 

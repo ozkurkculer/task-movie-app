@@ -2,7 +2,7 @@ import React from 'react'
 import icons from '../lib/icons'
 
 export const metadata = {
-  title: 'Watchlist',
+  title: 'Watchlist | Movie App',
   description: 'Watchlist page',
 }
 
