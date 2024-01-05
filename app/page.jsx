@@ -39,23 +39,23 @@ export default function Home() {
   };
 
   const topRatedSlider = topRatedMoviePosterPaths.map((path, index) => (
-    <ImagePoster path={path} key={index} num={index + 1} mainClasses="h-auto w-[200px]" classes="rounded-2xl" />
+    <ImagePoster path={path} key={index} num={index + 1} mainClasses="h-auto w-[200px] sm:w-[220px] md:w-[320px] lg:w-[350px]" classes="rounded-2xl" />
   ));
 
   const topRatedPosters = topRatedMoviePosterPaths.map((path, index) => (
-    <ImagePoster path={path} key={index} classes="h-auto w-[200px] sm:w-[90px] md:w-[100px] rounded-2xl" />
+    <ImagePoster path={path} key={index} mainClasses="h-auto w-[100px] sm:w-[110px] md:w-[160px] lg:w-[200px]" classes="rounded-2xl" />
   ));
 
   const popularPosters = popularMoviePosterPaths.map((path, index) => (
-    <ImagePoster path={path} key={index} classes="h-auto w-[200px] sm:w-[90px] md:w-[100px] rounded-2xl" />
+    <ImagePoster path={path} key={index} mainClasses="h-auto w-[100px] sm:w-[110px] md:w-[160px] lg:w-[200px]" classes="rounded-2xl" />
   ));
 
   const nowPlayingPosters = nowPlayingMoviePosterPaths.map((path, index) => (
-    <ImagePoster path={path} key={index} classes="h-auto w-[200px] sm:w-[90px] md:w-[100px] rounded-2xl" />
+    <ImagePoster path={path} key={index} mainClasses="h-auto w-[100px] sm:w-[110px] md:w-[160px] lg:w-[200px]" classes="rounded-2xl" />
   ));
 
   const upcomingPosters = upcomingMoviePosters.map((path, index) => (
-    <ImagePoster path={path} key={index} classes="h-auto w-[200px] sm:w-[90px] md:w-[100px] rounded-2xl" />
+    <ImagePoster path={path} key={index} mainClasses="h-auto w-[100px] sm:w-[110px] md:w-[160px] lg:w-[200px]" classes="rounded-2xl" />
   ));
 
   const tabs = [
@@ -85,9 +85,8 @@ export default function Home() {
           {topRatedSlider}
         </div>
       </div>
-      <section>
+      <section className="flex justify-center">
         <Tabs tabs={tabs} />
-        {/* Add content for each tab here */}
       </section>
     </div>
   )
