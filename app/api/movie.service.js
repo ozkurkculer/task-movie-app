@@ -2,15 +2,17 @@
 const URL = "https://api.themoviedb.org/";
 const API_KEY = process.env.NEXT_PUBLIC_API;
 
+const options = {
+    method: "GET",
+    headers: {
+      accept: "application/json",
+      Authorization: API_KEY,
+    },
+  };
+
 const getPopularMovies = async () => {
     const url = URL + '3/movie/popular?language=en-US&page=1';
-    const options = {
-        method: 'GET',
-        headers: {
-            accept: 'application/json',
-            Authorization: API_KEY,
-        }
-    };
+
     const res = await fetch(url, options).then(res => res.json()).then(
         (res) => {
             const imagePaths = res.results.reduce((acc, cur) => {
@@ -28,13 +30,7 @@ const getPopularMovies = async () => {
 
 const getTopRatedMovies = async () => {
     const url = URL + '3/movie/top_rated?language=en-US&page=1'
-    const options = {
-        method: 'GET',
-        headers: {
-            accept: 'application/json',
-            Authorization: API_KEY,
-        }
-    };
+
     const res = await fetch(url, options).then(res => res.json()).then(
         (res) => {
             res = res.results.slice(0, 10)
@@ -53,13 +49,6 @@ const getTopRatedMovies = async () => {
 
 const getNowPlayingMovies = async () => {
     const url = URL + "/3/movie/now_playing?language=en-US&page=1";
-    const options = {
-        method: 'GET',
-        headers: {
-            accept: 'application/json',
-            Authorization: API_KEY,
-        }
-    };
 
     const res = await fetch(url, options).then(res => res.json()).then(
         (res) => {
@@ -79,13 +68,6 @@ const getNowPlayingMovies = async () => {
 
 const getUpcomingMovies = async () => {
     const url = URL + '3/movie/upcoming?language=en-US&page=1';
-    const options = {
-        method: 'GET',
-        headers: {
-            accept: 'application/json',
-            Authorization: API_KEY,
-        }
-    };
 
     const res = await fetch(url, options).then(res => res.json()).then(
         (res) => {
